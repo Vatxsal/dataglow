@@ -1,0 +1,118 @@
+:root {
+  --primary-color: #00d4ff;
+  --secondary-color: #00ff6a;
+  --background-color: #1a1a1a;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --hover-color: #535bf2;
+  --light-background-color: #f9f9f9;
+  --link-color: #646cff;
+  --link-hover-color: #747bff;
+  --font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  font-family: var(--font-family);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--text-color);
+  background-color: var(--background-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  padding: 0 1rem;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Link Styles */
+a {
+  font-weight: 500;
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Button Styles */
+button {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  border-color: var(--primary-color);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 3px solid var(--primary-color);
+}
+
+/* Light mode adjustments */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  body {
+    background-color: var(--light-background-color);
+    color: #213547;
+  }
+
+  a:hover {
+    color: var(--link-hover-color);
+  }
+
+  button {
+    background-color: #ffffff;
+    color: #213547;
+    border: 2px solid var(--link-color);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 0.5em 1em;
+  }
+}
